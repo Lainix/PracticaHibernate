@@ -1,0 +1,28 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+  <session-factory>
+      <!--aqui tenemos  las propiedades de mi configuracion
+      1- es mi idioma que va hablar mi programa que esta en mysql
+      2- es mi driver class 
+      3- es mi conecion que va atraer mis datos de mysql
+      4- es mi usuarioname
+      5- es mi password 
+        con todo esto establesco mis configuraciones de mi documento      -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/generationHibernate?zeroDateTimeBehavior=convertToNull</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">pui123xx</property>
+        
+        <!--aqui voy a traer mi tabla clase de mi paquete pojo de mi clase persona
+         y voy hacer lo mismo con mi clase TipoPersona       -->
+        <mapping class="pojo.Persona"/>
+        <mapping class="pojo.TipoPersona"/>
+        
+    </session-factory>
+</hibernate-configuration>
